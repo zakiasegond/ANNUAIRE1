@@ -60,3 +60,16 @@ while($gmail=$cpt->fetch()){
       echo '<p>adresse mail= ' . $gmail['email'];
 }      
  ?>
+
+<?php
+
+$cpt = $bdd->query('UPDATE contacts SET email ="ogatien@simplon.co" WHERE id = "18"') ; 
+while($UPDATE=$cpt->fetch()){
+      echo '<p>adresse mail= ' . $UPDATE['email'];
+}      
+?>
+
+<?php
+$de = $bdd->query('DELETE FROM appartenir WHERE fk_contact = 13');
+$del = $bdd->query('DELETE FROM contacts WHERE id = 13');  
+?>
