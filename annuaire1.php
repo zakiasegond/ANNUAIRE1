@@ -52,6 +52,11 @@ while($donnees=$reponse->fetch()){
 
 }
 
+ ?>
 
-
+ <?php
+$cpt = $bdd->query ('SELECT * FROM contacts WHERE email LIKE "%gmail%"') ;
+while($gmail=$cpt->fetch()){
+      echo '<p>adresse mail= ' . $gmail['email'];
+}      
  ?>
